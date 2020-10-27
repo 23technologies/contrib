@@ -5,7 +5,7 @@ config = []
 modules = []
 
 gh = github.Github()
- 
+
 for repository in gh.get_organization("gardener").get_repos(sort='full_name'):
 
     if repository.name == 'gardener':
