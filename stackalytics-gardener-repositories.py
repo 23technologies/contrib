@@ -12,14 +12,14 @@ for repository in gh.get_organization("gardener").get_repos(sort='full_name'):
         data = {
             'module': repository.name,
             'organization': 'gardener',
-            'url': repository.clone_url
+            'uri': repository.clone_url
         }
         modules.append(repository.name)
     else:
         data = {
             'module': "%s@gardener" % repository.name,
             'organization': 'gardener',
-            'url': repository.clone_url
+            'uri': repository.clone_url
         }
         modules.append("%s@gardener" % repository.name)
 
